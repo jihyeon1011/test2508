@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>웹디자인기능사 C1 float 레이아웃</title>
+<style>
+  * {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #wrap {
+    width: 1000px;
+    height: 650px;
+    margin: 0 auto;
+    border: 1px solid black;
+    overflow: hidden; /* float 자식 높이 인식 */
+  }
+
+  /* 왼쪽 영역 */
+  #header {
+    float: left;
+    width: 20%;
+    height: 650px;
+    border-right: 1px solid black;
+    overflow: hidden; /* 자식 높이 인식 */
+  }
+
+  .logo {
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid black;
+  }
+
+  .nav {
+    height: 550px;
+    line-height: 550px;
+  }
+
+  /* 오른쪽 전체 영역 */
+  #right-content {
+    float: left;
+    width: 80%;
+    height: 650px;
+    overflow: hidden;
+  }
+
+  #slide {
+    width: 100%;
+    height: 300px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    line-height: 300px;
+  }
+
+  #contents {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .content {
+    float: left;
+    width: 33.3333%;
+    height: 100%;
+    line-height: 200px;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+  }
+
+  .content:last-child {
+    border-right: none;
+  }
+
+  #footer {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid black;
+    overflow: hidden;
+  }
+
+  .footer-left {
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid black;
+    line-height: 100px;
+  }
+
+  .footer-right {
+    float: left;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .footer-menu {
+    float: left;
+    width: 100%;
+    height: 50%;
+    line-height: 50px;
+    border-bottom: 1px solid black;
+  }
+
+  .footer-copy {
+    float: left;
+    width: 100%;
+    height: 50%;
+    line-height: 50px;
+  }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="logo">로고</div>
+      <div class="nav">메뉴</div>
+    </header>
+
+    <div id="right-content">
+      <div id="slide">이미지 슬라이드</div>
+
+      <main id="contents">
+        <section class="content">공지사항</section>
+        <section class="content">배너</section>
+        <section class="content">바로가기</section>
+      </main>
+
+      <footer id="footer">
+        <div class="footer-left">로고</div>
+        <div class="footer-right">
+          <div class="footer-menu">하단 메뉴</div>
+          <div class="footer-copy">카피라이트</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

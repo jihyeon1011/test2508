@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a1_레이아웃3_display:grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: 100px 300px 200px 100px;
+            border: 1px solid black;
+        }
+
+        #header {
+            display: grid;
+            grid-template-columns: 17% 83%;
+            border-bottom: 1px solid black;
+        }
+
+        .logo,
+        .nav {
+            display: grid;
+            place-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            border-right: 1px solid black;
+        }
+
+        #slide {
+            display: grid;
+            place-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        #contents {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid black;
+        }
+
+        .content1,
+        .content2,
+        .content3 {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            border-right: 1px solid black;
+        }
+
+        .content3 {
+            border-right: none;
+        }
+
+        #footer {
+            display: grid;
+            grid-template-columns: 17% 66% 17%;
+        }
+
+        .footer1,
+        .footer2,
+        .footer3 {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            border-right: 1px solid black;
+        }
+
+        .footer3 {
+            border-right: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">로고</div>
+            <div class="nav">메뉴</div>
+        </header>
+        <article id="slide">
+            이미지 슬라이드
+        </article>
+        <main id="contents">
+            <section class="content1">공지사항/갤러리</section>
+            <section class="content2">배너</section>
+            <section class="content3">바로가기</section>
+        </main>
+        <footer id="footer">
+            <div class="footer1">로고</div>
+            <div class="footer2">Copyright</div>
+            <div class="footer3">SNS</div>
+        </footer>
+    </div>
+</body>
+
+</html>
